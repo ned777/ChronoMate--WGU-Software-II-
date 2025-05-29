@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.AddUpdateCustomerController"
+            prefWidth="800" prefHeight="500">
+
+    <children>
+        <!-- Customer Form Fields -->
+        <GridPane layoutX="50" layoutY="30" hgap="10" vgap="10">
+            <Label text="Customer ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="customerIdField" GridPane.rowIndex="0" GridPane.columnIndex="1" disable="true"/>
+
+            <Label text="Name:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="nameField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <Label text="Address:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextField fx:id="addressField" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+
+            <Label text="Postal Code:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="postalField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <Label text="Phone:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <TextField fx:id="phoneField" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Country and Division Selection -->
+        <GridPane layoutX="400" layoutY="30" hgap="10" vgap="10">
+            <Label text="Country:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="countryCombo" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+
+            <Label text="First-Level Division:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="divisionCombo" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Action Buttons -->
+        <HBox layoutX="50" layoutY="260" spacing="15">
+            <Button fx:id="saveButton" text="Save" onAction="#onSave"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#onDelete"/>
+        </HBox>
+
+        <!-- Message Display -->
+        <Label fx:id="messageLabel"
+               layoutX="50" layoutY="310"
+               text="" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane prefHeight="600" prefWidth="1000" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.AppointmentOverviewController">
+
+    <!-- Top toolbar with Add, Update, Delete, Customers, Reports buttons -->
+    <top>
+      <ToolBar>
+        <Button fx:id="addButton" onAction="#onAddAppointment" text="Add Appointment" />
+        <Button fx:id="updateButton" onAction="#onUpdateAppointment" text="Update Appointment" />
+        <Button fx:id="deleteButton" onAction="#onDeleteAppointment" text="Delete Appointment" />
+
+        <!-- Add spacing between left and right buttons -->
+        <Separator orientation="VERTICAL" />
+      </ToolBar>
+    </top>
+
+    <!-- Center: your existing tab pane -->
+    <center>
+      <TabPane fx:id="tabPane" prefHeight="560" prefWidth="980">
+        <tabs>
+          <!-- Weekly View Tab -->
+          <Tab text="Weekly">
+            <content>
+              <TableView fx:id="weeklyTable" prefHeight="520" prefWidth="960">
+                <columns>
+                  <TableColumn fx:id="weekIdCol" text="Appointment ID" />
+                  <TableColumn fx:id="weekTitleCol" text="Title" />
+                  <TableColumn fx:id="weekDescCol" text="Description" />
+                  <TableColumn fx:id="weekLocationCol" text="Location" />
+                  <TableColumn fx:id="weekContactCol" text="Contact" />
+                  <TableColumn fx:id="weekTypeCol" text="Type" />
+                  <TableColumn fx:id="weekStartCol" text="Start" />
+                  <TableColumn fx:id="weekEndCol" text="End" />
+                  <TableColumn fx:id="weekCustomerCol" text="Customer ID" />
+                  <TableColumn fx:id="weekUserCol" text="User ID" />
+                </columns>
+              </TableView>
+            </content>
+          </Tab>
+
+          <!-- Monthly View Tab -->
+          <Tab text="Monthly">
+            <content>
+              <TableView fx:id="monthlyTable" prefHeight="520" prefWidth="960">
+                <columns>
+                  <TableColumn fx:id="monthIdCol" text="Appointment ID" />
+                  <TableColumn fx:id="monthTitleCol" text="Title" />
+                  <TableColumn fx:id="monthDescCol" text="Description" />
+                  <TableColumn fx:id="monthLocationCol" text="Location" />
+                  <TableColumn fx:id="monthContactCol" text="Contact" />
+                  <TableColumn fx:id="monthTypeCol" text="Type" />
+                  <TableColumn fx:id="monthStartCol" text="Start" />
+                  <TableColumn fx:id="monthEndCol" text="End" />
+                  <TableColumn fx:id="monthCustomerCol" text="Customer ID" />
+                  <TableColumn fx:id="monthUserCol" text="User ID" />
+                </columns>
+              </TableView>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+    </center>
+
+</BorderPane>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.LoginController"
+            prefWidth="600" prefHeight="400">
+
+    <children>
+        <!-- App Name -->
+        <Label fx:id="appTitle"
+               layoutX="194.0" layoutY="48.0"
+               text="ChronoMate">
+            <font>
+                <Font name="System Bold" size="36.0"/>
+            </font>
+        </Label>
+        <Label fx:id="appSubtitle"
+               layoutX="224.0" layoutY="87.0"
+               text="Scheduling System">
+            <font>
+                <Font name="System Italic" size="19.0"/>
+            </font>
+        </Label>
+
+        <!-- Username -->
+        <Label layoutX="120.0" layoutY="185.0"
+               text="%label.username">
+            <font>
+                <Font size="19.0"/>
+            </font>
+        </Label>
+        <TextField fx:id="usernameField"
+                   layoutX="229.0" layoutY="187.0"/>
+
+        <!-- Password -->
+        <Label layoutX="120.0" layoutY="233.0"
+               text="%label.password">
+            <font>
+                <Font size="18.0"/>
+            </font>
+        </Label>
+        <PasswordField fx:id="passwordField"
+                       layoutX="229.0" layoutY="235.0"/>
+
+        <!-- Message Label for errors -->
+        <Label fx:id="messageLabel"
+               layoutX="229.0" layoutY="275.0"
+               text="" wrapText="true"
+               style="-fx-text-fill: red;"/>
+
+        <!-- Sign-in Button -->
+        <Button fx:id="loginButton"
+                layoutX="260.0" layoutY="315.0"
+                text="%button.login"
+                onAction="#onLogin"/>
+
+        <!-- ZoneId Display -->
+        <Label fx:id="zoneLabel"
+               layoutX="120.0" layoutY="360.0"
+               text="%label.zone"/>
+    </children>
+</AnchorPane>

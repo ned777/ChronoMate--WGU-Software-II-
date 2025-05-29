@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.AddUpdateAppointmentController"
+            prefWidth="900" prefHeight="600">
+    <children>
+        <!-- Appointment Form -->
+        <GridPane layoutX="30" layoutY="30" hgap="10" vgap="10">
+            <!-- Appointment ID -->
+            <Label text="Appointment ID:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="appointmentIdField" GridPane.rowIndex="0" GridPane.columnIndex="1" disable="true"/>
+
+            <!-- Title -->
+            <Label text="Title:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <TextField fx:id="titleField" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- Description -->
+            <Label text="Description:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <TextArea fx:id="descriptionArea" GridPane.rowIndex="2" GridPane.columnIndex="1" prefRowCount="3"/>
+
+            <!-- Location -->
+            <Label text="Location:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <TextField fx:id="locationField" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+
+            <!-- Contact -->
+            <Label text="Contact:" GridPane.rowIndex="4" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="contactCombo" GridPane.rowIndex="4" GridPane.columnIndex="1"/>
+
+            <!-- Type -->
+            <Label text="Type:" GridPane.rowIndex="5" GridPane.columnIndex="0"/>
+            <TextField fx:id="typeField" GridPane.rowIndex="5" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Date and Time Selection -->
+        <GridPane layoutX="450" layoutY="30" hgap="10" vgap="10">
+            <!-- Start -->
+            <Label text="Start Date:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="startDatePicker" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+            <Label text="Start Time:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="startTimeCombo" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+
+            <!-- End -->
+            <Label text="End Date:" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <DatePicker fx:id="endDatePicker" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+            <Label text="End Time:" GridPane.rowIndex="3" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="endTimeCombo" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+        </GridPane>
+
+        <!-- Customer and User Selection -->
+        <GridPane layoutX="30" layoutY="300" hgap="10" vgap="10">
+            <Label text="Customer:" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="customerCombo" GridPane.rowIndex="0" GridPane.columnIndex="1" prefWidth="200"/>
+            <Label text="User:" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+            <ComboBox fx:id="userCombo" GridPane.rowIndex="1" GridPane.columnIndex="1" prefWidth="200"/>
+        </GridPane>
+
+        <!-- Action Buttons -->
+        <HBox layoutX="450" layoutY="300" spacing="15" alignment="CENTER_LEFT">
+            <Button fx:id="saveButton" text="Save" onAction="#onSave"/>
+            <Button fx:id="deleteButton" text="Delete" onAction="#onDelete"/>
+        </HBox>
+
+        <!-- Message Label -->
+        <Label fx:id="messageLabel" layoutX="30" layoutY="370" prefWidth="600" wrapText="true"/>
+    </children>
+</AnchorPane>

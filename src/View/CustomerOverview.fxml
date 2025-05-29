@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controller.CustomerOverviewController"
+            prefWidth="800" prefHeight="600">
+    <top>
+        <ToolBar>
+            <Button fx:id="addCustomerButton" text="Add Customer" onAction="#onAddCustomer"/>
+            <Button fx:id="updateCustomerButton" text="Update Customer" onAction="#onUpdateCustomer"/>
+            <Button fx:id="deleteCustomerButton" text="Delete Customer" onAction="#onDeleteCustomer"/>
+        </ToolBar>
+    </top>
+    <center>
+        <TableView fx:id="customerTable" prefWidth="780" prefHeight="550">
+            <columns>
+                <TableColumn fx:id="idCol" text="ID"/>
+                <TableColumn fx:id="nameCol" text="Name"/>
+                <TableColumn fx:id="addressCol" text="Address"/>
+                <TableColumn fx:id="postalCodeCol" text="Postal Code"/>
+                <TableColumn fx:id="phoneCol" text="Phone"/>
+                <TableColumn fx:id="divisionCol" text="Division"/>
+                <TableColumn fx:id="countryCol" text="Country"/>
+            </columns>
+        </TableView>
+    </center>
+</BorderPane>
