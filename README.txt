@@ -11,7 +11,6 @@ This Java-based application allows users to manage customer and appointment reco
 Author & Contact
 ----------------
 Author: Ned Nguyen  
-Contact: ned.nguyen@email.com  
 Student Application Version: 1.0  
 Date: May 29, 2025
 
