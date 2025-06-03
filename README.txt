@@ -6,7 +6,7 @@ Title & Purpose
 ---------------
 Appointment Scheduling Application
 
-This Java-based application allows users to manage customer and appointment records for a business. Users can view, add, update, and delete customers and appointments, generate reports, and review their schedules in a streamlined, user-friendly interface.
+This Java-based desktop application allows businesses to manage customer information and appointment scheduling through a clean, intuitive interface. Users can add, update, delete, and view customers and appointments, as well as generate important scheduling reports. It is designed to support efficient time management and streamlined communication across departments.
 
 Author & Contact
 ----------------
@@ -23,24 +23,41 @@ MySQL Connector/J Version: mysql-connector-java-8.0.25
 
 How to Run the Program
 ----------------------
-1. Ensure you have Java SE 17.0.1 and JavaFX-SDK-17.0.1 installed on your system.
-2. Download and extract the project source files.
-3. Open the project in IntelliJ IDEA Community Edition 2023.2.5.
-4. Add the JavaFX SDK and MySQL Connector/J to the project’s library/module path.
-5. Update the database connection settings (username, password, URL) if needed in the `DBConnection` class.
-6. Build and run the application from IntelliJ.
-   - VM options for JavaFX may be required (e.g.):
+1. Ensure you have the following installed:
+   - Java SE 17.0.1
+   - JavaFX-SDK-17.0.1
+   - MySQL Server and MySQL Workbench
+
+2. Download and extract the source project files.
+
+3. Open the project using IntelliJ IDEA Community Edition 2023.2.5.
+
+4. Configure the JavaFX library path in IntelliJ:
+   - VM Options (when running the app):
      ```
      --module-path "PATH_TO_JAVAFX_LIB" --add-modules javafx.controls,javafx.fxml
      ```
-7. Log in using provided test credentials or create a new user via the database.
+   - Replace `PATH_TO_JAVAFX_LIB` with the actual path to your JavaFX SDK `/lib` directory.
+
+5. Ensure the MySQL Connector JAR is added to your project libraries.
+
+6. Import the provided SQL database schema into MySQL and adjust the database connection settings in the `DBConnection.java` class:
+   - URL
+   - Username
+   - Password
+
+7. Build and run the application from IntelliJ.
+
+8. Log in with:
+   - Username: `test`
+   - Password: `test`
 
 Additional Report Description (Part A3f)
 ----------------------------------------
-[Replace this text with your report details. Example:]
-The "Appointments by Customer Division" report was implemented as the additional report. This report displays the total number of appointments grouped by each first-level division (e.g., state or province), helping management analyze appointment distribution across geographic regions.
+**Appointments by Country Report**
+
+The third report implemented displays the number of appointments grouped by country. This helps the business evaluate its customer engagement across different countries, providing insight into regional performance and outreach. The report queries each customer's country through JOINs and groups the appointment count accordingly. It is accessible in the Reports tab of the application interface.
 
 MySQL Connector/J Driver
 ------------------------
 Version: mysql-connector-java-8.0.25
-
