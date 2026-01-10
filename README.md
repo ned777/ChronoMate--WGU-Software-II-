@@ -1,6 +1,6 @@
 # Appointment Scheduling Application
 
-> Java-based desktop application for efficient customer and appointment management with comprehensive reporting features
+Java-based desktop application for efficient customer and appointment management with comprehensive reporting features
 
 [![Java](https://img.shields.io/badge/Java-17-orange.svg)](https://www.oracle.com/java/)
 [![JavaFX](https://img.shields.io/badge/JavaFX-17.0.1-blue.svg)](https://openjfx.io/)
@@ -216,4 +216,5 @@ This project is for educational purposes. All rights reserved.
 
 **Version:** 1.0  
 **Last Updated:** May 29, 2025
+
 
